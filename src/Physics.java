@@ -1,21 +1,14 @@
 public class Physics {
-
-    private float Gravity = 9.8f;
-
     public float getGravity() {
-        return Gravity;
+        return gravity;
     }
 
     public void setGravity(float gravity) {
-        Gravity = gravity;
+        this.gravity = gravity;
     }
 
-    public static void main(String[] args) {
+    private float gravity = 9.8f;
 
 
 
-
-
-
-    }
 }
