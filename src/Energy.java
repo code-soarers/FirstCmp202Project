@@ -11,8 +11,9 @@ public class Energy extends Physics {
     float heatEnergy(float mass, float initialTemperature, float finalTemperature){
         return mass * 4.2f * (finalTemperature - initialTemperature);
     }
-    float nuclearEnergy(float mass){
-        return mass * 3.0*(Math.pow(10,8))*3.0*(Math.pow(10,8));
+    float workDone(float force, float distance){
+        return force * distance;
+
     }
 
 }
