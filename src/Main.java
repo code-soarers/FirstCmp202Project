@@ -111,7 +111,7 @@ public class Main {
             }
 
             else if(Objects.equals(userResponse2, "no")){
-                System.out.println("Thank you for using our calculator.");
+                System.out.println("Thank you for making use our calculator.");
                 break;
             }
         }
