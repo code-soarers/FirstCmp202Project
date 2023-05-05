@@ -5,7 +5,7 @@
 3. Heat Energy,
 4. Work done,
 5. Nuclear Energy, and 
-6. Thermal Energy.
+6. Gravitational Energy.
 
 When the user first opens the calculator, it would ask them what energy problem they want to solve (limited only to the options above). 
 Once that is selected, the user will enter the values for whatever they're trying to find the solution to.
