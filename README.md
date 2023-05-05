@@ -14,4 +14,10 @@ After getting the answer, the user will then be asked if that is all they want t
 If yes, the code stops running.
 Otherwise, the user continues to select from the options available to calculate from.
 
-# Thank You!
+# Group Members' Names & Matric Numbers:
+1. Chukwuemeka Worthy O. BHU/22/04/05/0119
+2. Anishe Eniola Olumide BHU/21/04/05/0022
+3. Okoro Progress BHU/21/04/05/0089
+4. Evbooma Treasure BHU/21/04/10/0006
+5. Alshilele Jeremy BHU/21/04/09/0035
+6. Amadi Victor BHU/21/04/05/0088
