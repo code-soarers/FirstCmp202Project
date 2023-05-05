@@ -19,5 +19,8 @@ public class Energy extends Physics {
     double nuclearEnergy(double mass){
         return mass*speedOfLight*speedOfLight;
     }
-
+    float gravitationalEnergy(float mass, float gravitationalField, float height)
+    {
+        return mass * gravitationalField * height;
+    }
 }
