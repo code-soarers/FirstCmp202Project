@@ -7,9 +7,11 @@
 5. Nuclear Energy, and 
 6. Thermal Energy.
 
-# When the user first opens the calculator, it would ask them what forumla they want to find 
-# Once that is selected, the user will enter the values for whatever they're trying to find the solution to.
-# EG: Workdone = force * distance
-# After getting the answer, the user will then be asked if that is all they want to do on the calculator.
-# If yes, the code stops running.
-# Otherwise, the user continues to select from the options available to calculate from.
+When the user first opens the calculator, it would ask them what energy problem they want to solve (limited only to the options above). 
+Once that is selected, the user will enter the values for whatever they're trying to find the solution to.
+EG: Workdone = force * distance
+After getting the answer, the user will then be asked if that is all they want to do on the calculator.
+If yes, the code stops running.
+Otherwise, the user continues to select from the options available to calculate from.
+
+# Thank You!
