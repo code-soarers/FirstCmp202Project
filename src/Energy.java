@@ -5,7 +5,7 @@ public class Energy extends Physics {
     }
 
     float kineticEnergy(float mass, float velocity){
-        return (1/2) * mass * (velocity * velocity);
+        return ((float) 1 /2) * mass * (velocity * velocity);
     }
 
     float heatEnergy(float mass, float initialTemperature, float finalTemperature){
@@ -14,6 +14,10 @@ public class Energy extends Physics {
     float workDone(float force, float distance){
         return force * distance;
 
+    }
+    double speedOfLight=3.0*(Math.pow(10,8));
+    double nuclearEnergy(double mass){
+        return mass*speedOfLight*speedOfLight;
     }
 
 }
