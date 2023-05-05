@@ -9,7 +9,7 @@ public class Main {
         System.out.println("3. Heat Energy");
         System.out.println("4. Workdone");
         System.out.println("5. Nuclear Energy");
-        System.out.println("6. ..........");
+        System.out.println("6. Gravitational Energy");
 
         //creating Scanner object
         Scanner input=new Scanner(System.in);
