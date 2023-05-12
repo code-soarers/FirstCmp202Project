@@ -1,3 +1,5 @@
+package UI;
+
 public class Energy extends Physics {
 
     float potentialEnergy(float mass, float height) {

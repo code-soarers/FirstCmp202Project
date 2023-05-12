@@ -1,3 +1,5 @@
+package UI;
+
 public class Physics {
     public float getGravity() {
         return gravity;
