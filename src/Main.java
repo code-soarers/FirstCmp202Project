@@ -9,7 +9,7 @@ public class Main {
         System.out.println("3. Heat Energy");
         System.out.println("4. Workdone");
         System.out.println("5. Nuclear Energy");
-        System.out.println("6. Gravitational Energy");
+
 
         //creating Scanner object
         Scanner input=new Scanner(System.in);
@@ -55,7 +55,7 @@ public class Main {
             System.out.println("Heat Energy=" + energy.heatEnergy(mass,initialTemp,finalTemp) + "J");
 
         }
-        
+
         if (userResponse == 4) {
                 System.out.println("Enter Force:");
                 float force = input.nextFloat();
@@ -70,25 +70,25 @@ public class Main {
                 System.out.println("Enter Mass:");
                 Double mass = input.nextDouble();
 
-                System.out.println("Enter Speed of Light:");
-                Double speedOfLight = input.nextDouble();
+                //System.out.println("Enter Speed of Light:");
+                  //Double speedOfLight = input.nextDouble();
 
-                System.out.println("Nuclear Energy=" + energy.nuclearEnergy(mass, speedOfLight) + "J");
+                System.out.println("Nuclear Energy =" + energy.nuclearEnergy(mass) + "J");
             }
 
-            if (userResponse == 6) {
-                System.out.println("Enter Mass:");
-                float mass = input.nextFloat();
-
-                System.out.println("Enter Gravitational Field:");
-                float gravitationalField = input.nextFloat();
-
-                System.out.println("Enter Height:");
-                float height = input.nextFloat();
-
-                System.out.println(
-                        "Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
-            }
+//            if (userResponse == 6) {
+//                System.out.println("Enter Mass:");
+//                float mass = input.nextFloat();
+//
+//                System.out.println("Enter Gravitational Field:");
+//                float gravitationalField = input.nextFloat();
+//
+//                System.out.println("Enter Height:");
+//                float height = input.nextFloat();
+//
+//                System.out.println(
+//                        "Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
+//            }
 
         while (true){
             System.out.println("Would you like to perform another calculator(yes or no):");
@@ -100,7 +100,7 @@ public class Main {
                 System.out.println("3. Heat Energy");
                 System.out.println("4. Workdone");
                 System.out.println("5. Nuclear Energy");
-                System.out.println("6. Gravitational Energy");
+
 
 
                 System.out.println("Enter Response Here:");
@@ -141,7 +141,7 @@ public class Main {
                     System.out.println("Heat Energy=" + energy.heatEnergy(mass,initialTemp,finalTemp) + "J");
 
                 }
-                
+
                 if (userResponse == 4) {
                         System.out.println("Enter Force:");
                         float force = input.nextFloat();
@@ -156,24 +156,24 @@ public class Main {
                         System.out.println("Enter Mass:");
                         Double mass = input.nextDouble();
 
-                        System.out.println("Enter Speed of Light:");
-                        Double speedOfLight = input.nextDouble();
+                       // System.out.println("Enter Speed of Light:");
+                        //Double speedOfLight = input.nextDouble();
 
-                        System.out.println("Nuclear Energy=" + energy.nuclearEnergy(mass, speedOfLight) + "J");
+                        System.out.println("Nuclear Energy=" + energy.nuclearEnergy(mass) + "J");
                     }
 
-                    if (userResponse == 6) {
-                        System.out.println("Enter Mass:");
-                        float mass = input.nextFloat();
-
-                        System.out.println("Enter Gravitational Field:);
-                        float gravitationalField = input.nextFloat();
-
-                        System.out.println("Enter Height:");
-                        float height = input.nextFloat();
-
-                        System.out.println("Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
-                    }
+//                    if (userResponse == 6) {
+//                        System.out.println("Enter Mass:");
+//                        float mass = input.nextFloat();
+//
+//                        System.out.println("Enter Gravitational Field:");
+//                        float gravitationalField = input.nextFloat();
+//
+//                        System.out.println("Enter Height:");
+//                        float height = input.nextFloat();
+//
+//                        System.out.println("Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
+//                    }
             }
 
             else if(Objects.equals(userResponse2, "no")){
