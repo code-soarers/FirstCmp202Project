@@ -12,7 +12,7 @@ import java.awt.geom.RoundRectangle2D;
 public class ProjectGui{
     JFrame frame = new JFrame("CALCULATOR HOME");
 
-    JLabel label1 = new JLabel(new ImageIcon("src/UI/"));
+    JLabel label1 = new JLabel(new ImageIcon("src/UI/physics.png"));//physics.png
     JLabel text1=new JLabel(" Welcome to Code");
     JLabel text2=new JLabel(" Soarers Physics ");
     JLabel text3=new JLabel(" Energy");
@@ -26,6 +26,8 @@ public class ProjectGui{
         frame.setLayout(new GridBagLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
+
+        label1.setPreferredSize(new Dimension(200,200)); //////////////////////////////
 
 
         text1.setFont(new Font("Gill Sans",Font.BOLD,25));
@@ -169,6 +171,7 @@ public class ProjectGui{
     JFrame frame2=new JFrame("HOME PAGE");
     JLabel label3=new JLabel("Choose a Formula:");
     JButton potentialEnergyBtn=new JButton("Potential Energy");
+    JButton kineticEnergyBtn=new JButton("Kinetic Energy");
 
     JButton backBtn=new JButton("Back");
 
@@ -211,10 +214,24 @@ public class ProjectGui{
         gridConstraints2.ipady=30;
         gridConstraints2.insets = new Insets(25, 15, 15, 15);
 
+
+        //
+        GridBagConstraints gridConstraints4=new GridBagConstraints();
+
+        gridConstraints4.gridx=0;
+        gridConstraints4.gridy=2;
+        gridConstraints4.gridwidth=3;
+        gridConstraints4.gridheight=1;
+        gridConstraints4.anchor=GridBagConstraints.CENTER;
+        gridConstraints4.ipadx=50;
+        gridConstraints4.ipady=30;
+        gridConstraints2.insets = new Insets(25, 15, 15, 15);
+        //
+
         GridBagConstraints gridConstraints3=new GridBagConstraints();
 
         gridConstraints3.gridx=0;
-        gridConstraints3.gridy=2;
+        gridConstraints3.gridy=3;
         gridConstraints3.gridwidth=1;
         gridConstraints3.gridheight=1;
         gridConstraints3.anchor=GridBagConstraints.SOUTHWEST;
@@ -223,6 +240,7 @@ public class ProjectGui{
 
         frame2.add(label3,gridConstraints);
         frame2.add(potentialEnergyBtn,gridConstraints2);
+        frame2.add(kineticEnergyBtn, gridConstraints4);
 
 
         JPanel buttonPanel2 = new JPanel();
@@ -239,13 +257,28 @@ public class ProjectGui{
             }
         });
 
+
+        kineticEnergyBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                forthFrame();
+            }
+        });
+
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.dispose();
             }
         });
     }
+
+
+    // POTENTIAL ENERGY HERE
+    //
+    //
+    //
+
 
     JFrame frame3=new JFrame("INPUT POTENTIAL ENERGY");
     JLabel headingLabel=new JLabel("Enter the Details:");
@@ -414,6 +447,201 @@ public class ProjectGui{
 
             frame4.add(panel2,gridConstraints2);
             panel2.add(label7,gridConstraints2);
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(null,"ERROR!");
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // KINETIC ENERGY HERE
+    //
+    //
+
+
+    JFrame Kframe3=new JFrame("INPUT KINETIC ENERGY");
+    JLabel KheadingLabel=new JLabel("Enter the Details:");
+    JLabel Klabel4=new JLabel("Enter Mass:");
+    JTextField Kmass=new JTextField();
+
+    JLabel Klabel5=new JLabel("Enter velocity:");
+    JTextField velocity=new JTextField();
+
+    JButton Kcalculatebtn=new JButton("CALCULATE");
+    public void forthFrame(){
+        Kframe3.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        Kframe3.setSize(351, 457);
+        Kframe3.setLayout(new GridBagLayout());
+        Kframe3.setLocationRelativeTo(null);
+        Kframe3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Kframe3.setVisible(true);
+//        frame3.setShape(new RoundRectangle2D.Float(0, 0, frame2.getWidth(), frame2.getHeight(), 20, 20));
+
+        Klabel4.setFont(new Font("Gill Sans",Font.BOLD,24));
+        Klabel4.setForeground(Color.darkGray);
+
+        KheadingLabel.setFont(new Font("Gill Sans",Font.BOLD,24));
+        KheadingLabel.setForeground(Color.darkGray);
+
+        Klabel5.setFont(new Font("Gill Sans",Font.BOLD,24));
+        Klabel5.setForeground(Color.darkGray);
+
+        Kcalculatebtn.setFont(new Font("Gill Sans",Font.PLAIN,17));
+        Kcalculatebtn.setForeground(Color.darkGray);
+
+
+
+        GridBagConstraints KgridConstraints=new GridBagConstraints();
+
+        KgridConstraints.gridx=0;
+        KgridConstraints.gridy=0;
+        KgridConstraints.gridwidth=3;
+        KgridConstraints.gridheight=1;
+        KgridConstraints.anchor=GridBagConstraints.CENTER;
+        KgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+
+        GridBagConstraints KgridConstraints2=new GridBagConstraints();
+
+        KgridConstraints2.gridx=0;
+        KgridConstraints2.gridy=1;
+        KgridConstraints2.gridwidth=3;
+        KgridConstraints2.gridheight=1;
+        KgridConstraints2.anchor=GridBagConstraints.NORTHWEST;
+        KgridConstraints2.insets = new Insets(5, 15, 10, 15);
+
+        GridBagConstraints KgridConstraints3=new GridBagConstraints();
+
+        KgridConstraints3.gridx=0;
+        KgridConstraints3.gridy=2;
+        KgridConstraints3.gridwidth=3;
+        KgridConstraints3.gridheight=1;
+        KgridConstraints3.ipadx=270;
+        KgridConstraints3.ipady=20;
+        KgridConstraints3.anchor=GridBagConstraints.NORTHWEST;
+        KgridConstraints3.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints KgridConstraints4=new GridBagConstraints();
+
+        KgridConstraints4.gridx=0;
+        KgridConstraints4.gridy=3;
+        KgridConstraints4.gridwidth=1;
+        KgridConstraints4.gridheight=1;
+        KgridConstraints4.anchor=GridBagConstraints.NORTHWEST;
+        KgridConstraints4.insets = new Insets(5, 15, 5, 15);
+
+        GridBagConstraints KgridConstraints5=new GridBagConstraints();
+
+        KgridConstraints5.gridx=0;
+        KgridConstraints5.gridy=4;
+        KgridConstraints5.gridwidth=3;
+        KgridConstraints5.gridheight=1;
+        KgridConstraints5.ipadx=270;
+        KgridConstraints5.ipady=20;
+
+        KgridConstraints5.anchor=GridBagConstraints.NORTHWEST;
+        KgridConstraints5.insets = new Insets(5, 15, 15, 15);
+
+
+        GridBagConstraints KgridConstraints6=new GridBagConstraints();
+
+        KgridConstraints6.gridx=0;
+        KgridConstraints6.gridy=5;
+        KgridConstraints6.gridwidth=1;
+        KgridConstraints6.gridheight=1;
+        KgridConstraints6.ipadx=150;
+        KgridConstraints6.ipady=40;
+        KgridConstraints6.anchor=GridBagConstraints.CENTER;
+        KgridConstraints6.insets = new Insets(5, 15, 5, 15);
+
+        Kframe3.add(KheadingLabel,KgridConstraints);
+        Kframe3.add(Klabel4,KgridConstraints2);
+        Kframe3.add(Kmass,KgridConstraints3);
+        Kframe3.add(Klabel5,KgridConstraints4);
+        Kframe3.add(velocity,KgridConstraints5);
+        Kframe3.add(Kcalculatebtn,KgridConstraints6);
+
+        Kcalculatebtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                kineticEnergy();
+            }
+        });
+    }
+
+    JFrame Kframe4=new JFrame("SOLUTION");
+    JLabel Klabel6=new JLabel("kinetic Energy");
+
+
+
+    public void kineticEnergy(){
+        Kframe4.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        Kframe4.setSize(400, 449);
+        Kframe4.setLayout(new GridBagLayout());
+        Kframe4.setLocationRelativeTo(null);
+        Kframe4.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Kframe4.setVisible(true);
+
+        Klabel6.setFont(new Font("Gill Sans",Font.BOLD,24));
+        Klabel6.setForeground(Color.darkGray);
+
+        JPanel Kpanel = new JPanel();
+
+        JPanel Kpanel2 = new JPanel();
+
+        GridBagConstraints AgridConstraints=new GridBagConstraints();
+
+        AgridConstraints.gridx=0;
+        AgridConstraints.gridy=1;
+        AgridConstraints.gridwidth=1;
+        AgridConstraints.gridheight=1;
+        AgridConstraints.ipadx=150;
+        AgridConstraints.ipady=50;
+        AgridConstraints.anchor=GridBagConstraints.CENTER;
+        AgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints AgridConstraints2=new GridBagConstraints();
+
+        AgridConstraints2.gridx=0;
+        AgridConstraints2.gridy=2;
+        AgridConstraints2.gridwidth=1;
+        AgridConstraints2.gridheight=1;
+        AgridConstraints2.ipadx=80;
+        AgridConstraints2.ipady=30;
+        AgridConstraints2.anchor=GridBagConstraints.CENTER;
+        AgridConstraints2.insets = new Insets(35, 15, 15, 15);
+
+
+        Kframe4.add(Kpanel,AgridConstraints);
+
+        Kpanel.add(Klabel6,AgridConstraints);
+
+
+        Energy energy=new Energy();
+        try{
+            float area=energy.kineticEnergy(Float.parseFloat(Kmass.getText()),Float.parseFloat(velocity.getText()));
+            JLabel Klabel7=new JLabel("Answer="+area+"J");
+            Klabel7.setFont(new Font("Gill Sans",Font.BOLD,24));
+            Klabel7.setForeground(Color.darkGray);
+
+            Kframe4.add(Kpanel2,AgridConstraints2);
+            Kpanel2.add(Klabel7,AgridConstraints2);
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(null,"ERROR!");
