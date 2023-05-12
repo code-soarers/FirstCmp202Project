@@ -7,3 +7,10 @@
 5. Workdone
 
 The Program is in two mode:Graphical User Interface(GUI) and Terminal based on the user's choice.
+
+# Screenshot
+
+![](image1.png)
+![](image2.png)
+![](image3.png)
+![](image4.png)
