@@ -173,6 +173,7 @@ public class ProjectGui{
     JButton potentialEnergyBtn=new JButton("Potential Energy");
     JButton kineticEnergyBtn=new JButton("Kinetic Energy");
 
+    JButton HeatEnergyBtn = new JButton("Heat Energy");
     JButton backBtn=new JButton("Back");
 
 
@@ -226,12 +227,23 @@ public class ProjectGui{
         gridConstraints4.ipadx=50;
         gridConstraints4.ipady=30;
         gridConstraints2.insets = new Insets(25, 15, 15, 15);
+
+        GridBagConstraints gridConstraints5=new GridBagConstraints();
+
+        gridConstraints5.gridx=0;
+        gridConstraints5.gridy=3;
+        gridConstraints5.gridwidth=3;
+        gridConstraints5.gridheight=1;
+        gridConstraints5.anchor=GridBagConstraints.CENTER;
+        gridConstraints5.ipadx=50;
+        gridConstraints5.ipady=30;
+        gridConstraints5.insets = new Insets(25, 15, 15, 15);
         //
 
         GridBagConstraints gridConstraints3=new GridBagConstraints();
 
         gridConstraints3.gridx=0;
-        gridConstraints3.gridy=3;
+        gridConstraints3.gridy=4;
         gridConstraints3.gridwidth=1;
         gridConstraints3.gridheight=1;
         gridConstraints3.anchor=GridBagConstraints.SOUTHWEST;
@@ -241,6 +253,7 @@ public class ProjectGui{
         frame2.add(label3,gridConstraints);
         frame2.add(potentialEnergyBtn,gridConstraints2);
         frame2.add(kineticEnergyBtn, gridConstraints4);
+        frame2.add(HeatEnergyBtn, gridConstraints5);
 
 
         JPanel buttonPanel2 = new JPanel();
@@ -269,6 +282,14 @@ public class ProjectGui{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame2.dispose();
+            }
+        });
+
+        HeatEnergyBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fourthFrame();
+
             }
         });
     }
@@ -650,10 +671,206 @@ public class ProjectGui{
 
 
     }
+    JFrame frame5 = new JFrame("INPUT HEAT ENERGY");
+    JLabel headingLabel2 = new JLabel("Enter the Details:");
+    JLabel label8 = new JLabel("Enter Mass:");
+    JLabel label9 = new JLabel("Enter Initial Temperature:");
+    JLabel label10 = new JLabel("Enter Final Temperature:");
+    JTextField mass2 = new JTextField();
+    JTextField initialTemperature = new JTextField();
+    JTextField finalTemperature = new JTextField();
+    JButton calculatebtn2 = new JButton("CALCULATE");
+    public void fourthFrame() {
+        frame5.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        frame5.setSize(650, 590);
+        frame5.setLayout(new GridBagLayout());
+        frame5.setLocationRelativeTo(null);
+        frame5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame5.setVisible(true);
+//        frame5.setShape(new RoundRectangle2D.Float(0, 0, frame2.getWidth(), frame2.getHeight(), 20, 20));
+
+        headingLabel2.setFont(new Font("Gill Sans", Font.BOLD, 20));
+        headingLabel2.setForeground(Color.darkGray);
+
+        label8.setFont(new Font("Gill Sans", Font.BOLD, 20));
+        label8.setForeground(Color.darkGray);
+
+        label9.setFont(new Font("Gill Sans", Font.BOLD, 20));
+        label9.setForeground(Color.darkGray);
+
+        label10.setFont(new Font("Gill Sans", Font.BOLD, 20));
+        label10.setForeground(Color.darkGray);
+
+        calculatebtn2.setFont(new Font("Gill Sans", Font.PLAIN, 17));
+        calculatebtn2.setForeground(Color.darkGray);
+
+
+        GridBagConstraints gridConstraints7 = new GridBagConstraints();
+
+        gridConstraints7.gridx = 0;
+        gridConstraints7.gridy = 0;
+        gridConstraints7.gridwidth = 3;
+        gridConstraints7.gridheight = 1;
+        gridConstraints7.anchor = GridBagConstraints.CENTER;
+        gridConstraints7.insets = new Insets(5, 15, 20, 15);
+
+
+        GridBagConstraints gridConstraints8 = new GridBagConstraints();
+
+        gridConstraints8.gridx = 0;
+        gridConstraints8.gridy = 1;
+        gridConstraints8.gridwidth = 3;
+        gridConstraints8.gridheight = 1;
+        gridConstraints8.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints8.insets = new Insets(5, 15, 10, 15);
+
+        GridBagConstraints gridConstraints9 = new GridBagConstraints();
+
+        gridConstraints9.gridx = 0;
+        gridConstraints9.gridy = 2;
+        gridConstraints9.gridwidth = 3;
+        gridConstraints9.gridheight = 1;
+        gridConstraints9.ipadx = 270;
+        gridConstraints9.ipady = 20;
+        gridConstraints9.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints9.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints gridConstraints10 = new GridBagConstraints();
+
+        gridConstraints10.gridx = 0;
+        gridConstraints10.gridy = 3;
+        gridConstraints10.gridwidth = 3;
+        gridConstraints10.gridheight = 1;
+        gridConstraints10.ipadx = 270;
+        gridConstraints10.ipady = 20;
+        gridConstraints10.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints10.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints gridConstraints11 = new GridBagConstraints();
+
+        gridConstraints11.gridx = 0;
+        gridConstraints11.gridy = 4;
+        gridConstraints11.gridwidth = 3;
+        gridConstraints11.gridheight = 1;
+        gridConstraints11.ipadx = 270;
+        gridConstraints11.ipady = 20;
+        gridConstraints11.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints11.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints gridConstraints12 = new GridBagConstraints();
+
+        gridConstraints12.gridx = 0;
+        gridConstraints12.gridy = 5;
+        gridConstraints12.gridwidth = 1;
+        gridConstraints12.gridheight = 1;
+        gridConstraints12.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints12.insets = new Insets(5, 15, 5, 15);
+
+        GridBagConstraints gridConstraints13 = new GridBagConstraints();
+
+        gridConstraints13.gridx = 0;
+        gridConstraints13.gridy = 6;
+        gridConstraints13.gridwidth = 3;
+        gridConstraints13.gridheight = 1;
+        gridConstraints13.ipadx = 270;
+        gridConstraints13.ipady = 20;
+
+        gridConstraints13.anchor = GridBagConstraints.NORTHWEST;
+        gridConstraints13.insets = new Insets(5, 15, 15, 15);
+
+
+        GridBagConstraints gridConstraints14 = new GridBagConstraints();
+
+        gridConstraints14.gridx = 0;
+        gridConstraints14.gridy = 7;
+        gridConstraints14.gridwidth = 1;
+        gridConstraints14.gridheight = 1;
+        gridConstraints14.ipadx = 150;
+        gridConstraints14.ipady = 40;
+        gridConstraints14.anchor = GridBagConstraints.CENTER;
+        gridConstraints14.insets = new Insets(5, 15, 5, 15);
+
+        frame5.add(headingLabel2, gridConstraints7);
+        frame5.add(label8, gridConstraints8);
+        frame5.add(mass2, gridConstraints9);
+        frame5.add(label9, gridConstraints10);
+        frame5.add(initialTemperature, gridConstraints11);
+        frame5.add(label10, gridConstraints12);
+        frame5.add(finalTemperature, gridConstraints13);
+        frame5.add(calculatebtn2, gridConstraints14);
+
+        calculatebtn2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                HeatEnergy();
+            }
+        });
+
+    }
+
+    JFrame frame6 = new JFrame("SOLUTION");
+    JLabel label11 = new JLabel("Heat Energy");
+
+
+    public void HeatEnergy() {
+        frame6.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        frame6.setSize(400, 449);
+        frame6.setLayout(new GridBagLayout());
+        frame6.setLocationRelativeTo(null);
+        frame6.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame6.setVisible(true);
+
+        label11.setFont(new Font("Gill Sans", Font.BOLD, 24));
+        label11.setForeground(Color.darkGray);
+
+        JPanel panel3 = new JPanel();
+
+        JPanel panel4 = new JPanel();
+
+        GridBagConstraints gridConstraints15 = new GridBagConstraints();
+
+        gridConstraints15.gridx = 0;
+        gridConstraints15.gridy = 1;
+        gridConstraints15.gridwidth = 1;
+        gridConstraints15.gridheight = 1;
+        gridConstraints15.ipadx = 150;
+        gridConstraints15.ipady = 50;
+        gridConstraints15.anchor = GridBagConstraints.CENTER;
+        gridConstraints15.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints gridConstraints16 = new GridBagConstraints();
+
+        gridConstraints16.gridx = 0;
+        gridConstraints16.gridy = 2;
+        gridConstraints16.gridwidth = 1;
+        gridConstraints16.gridheight = 1;
+        gridConstraints16.ipadx = 80;
+        gridConstraints16.ipady = 30;
+        gridConstraints16.anchor = GridBagConstraints.CENTER;
+        gridConstraints16.insets = new Insets(35, 15, 15, 15);
+
+
+        frame6.add(panel3, gridConstraints15);
+
+        panel3.add(label11, gridConstraints15);
+
+
+        Energy energy = new Energy();
+        try {
+            float area2 = energy.heatEnergy(Float.parseFloat(mass2.getText()), Float.parseFloat(initialTemperature.getText()), Float.parseFloat(finalTemperature.getText()));
+            JLabel label12 = new JLabel("Answer=" + area2 + "J");
+            label12.setFont(new Font("Gill Sans", Font.BOLD, 24));
+            label12.setForeground(Color.darkGray);
+
+            frame6.add(panel4, gridConstraints16);
+            panel4.add(label12, gridConstraints16);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR!");
+        }
 
 
 
-}
+}}
 
 
 
