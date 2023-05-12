@@ -70,25 +70,11 @@ public class Main {
                 System.out.println("Enter Mass:");
                 Double mass = input.nextDouble();
 
-                //System.out.println("Enter Speed of Light:");
-                  //Double speedOfLight = input.nextDouble();
+
 
                 System.out.println("Nuclear Energy =" + energy.nuclearEnergy(mass) + "J");
             }
 
-//            if (userResponse == 6) {
-//                System.out.println("Enter Mass:");
-//                float mass = input.nextFloat();
-//
-//                System.out.println("Enter Gravitational Field:");
-//                float gravitationalField = input.nextFloat();
-//
-//                System.out.println("Enter Height:");
-//                float height = input.nextFloat();
-//
-//                System.out.println(
-//                        "Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
-//            }
 
         while (true){
             System.out.println("Would you like to perform another calculator(yes or no):");
@@ -156,24 +142,12 @@ public class Main {
                         System.out.println("Enter Mass:");
                         Double mass = input.nextDouble();
 
-                       // System.out.println("Enter Speed of Light:");
-                        //Double speedOfLight = input.nextDouble();
+
 
                         System.out.println("Nuclear Energy=" + energy.nuclearEnergy(mass) + "J");
                     }
 
-//                    if (userResponse == 6) {
-//                        System.out.println("Enter Mass:");
-//                        float mass = input.nextFloat();
 //
-//                        System.out.println("Enter Gravitational Field:");
-//                        float gravitationalField = input.nextFloat();
-//
-//                        System.out.println("Enter Height:");
-//                        float height = input.nextFloat();
-//
-//                        System.out.println("Gravitational Energy=" + energy.gravitationalEnergy(mass, gravitationalField, height) + "J");
-//                    }
             }
 
             else if(Objects.equals(userResponse2, "no")){
