@@ -174,12 +174,13 @@ public class ProjectGui{
     JButton kineticEnergyBtn=new JButton("Kinetic Energy");
 
     JButton HeatEnergyBtn = new JButton("Heat Energy");
+    JButton workDoneBtn=new JButton("workdone");
     JButton backBtn=new JButton("Back");
 
 
     public void secondFrame(){
         frame2.getContentPane().setBackground(new Color(4, 51, 255, 194));
-        frame2.setSize(295, 449);
+        frame2.setSize(295, 550);
         frame2.setLayout(new GridBagLayout());
         frame2.setLocationRelativeTo(null);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -243,17 +244,29 @@ public class ProjectGui{
         GridBagConstraints gridConstraints3=new GridBagConstraints();
 
         gridConstraints3.gridx=0;
-        gridConstraints3.gridy=4;
+        gridConstraints3.gridy=5;
         gridConstraints3.gridwidth=1;
         gridConstraints3.gridheight=1;
         gridConstraints3.anchor=GridBagConstraints.SOUTHWEST;
         gridConstraints3.insets = new Insets(25, 15, 15, 15);
+
+        GridBagConstraints gridConstraints7=new GridBagConstraints();
+
+        gridConstraints7.gridx=0;
+        gridConstraints7.gridy=4;
+        gridConstraints7.gridwidth=3;
+        gridConstraints7.gridheight=1;
+        gridConstraints7.anchor=GridBagConstraints.CENTER;
+        gridConstraints7.ipadx=80;
+        gridConstraints7.ipady=30;
+        gridConstraints7.insets = new Insets(25, 15, 15, 15);
 
 
         frame2.add(label3,gridConstraints);
         frame2.add(potentialEnergyBtn,gridConstraints2);
         frame2.add(kineticEnergyBtn, gridConstraints4);
         frame2.add(HeatEnergyBtn, gridConstraints5);
+        frame2.add(workDoneBtn,gridConstraints7);
 
 
         JPanel buttonPanel2 = new JPanel();
@@ -290,6 +303,13 @@ public class ProjectGui{
             public void actionPerformed(ActionEvent e) {
                 fourthFrame();
 
+            }
+        });
+
+        workDoneBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sixthFrame();
             }
         });
     }
@@ -870,7 +890,179 @@ public class ProjectGui{
 
 
 
-}}
+}
+    JFrame frame7=new JFrame("INPUT WORKDONE");
+    JLabel headLabel = new JLabel("Enter the Details:");
+    JLabel label2=new JLabel("Enter force:");
+    JTextField force=new JTextField();
+
+    JLabel label0=new JLabel("Enter distane:");
+    JTextField distance=new JTextField();
+
+    JButton solvebtn=new JButton("CALCULATE");
+    public void sixthFrame(){
+        frame7.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        frame7.setSize(351, 457);
+        frame7.setLayout(new GridBagLayout());
+        frame7.setLocationRelativeTo(null);
+        frame7.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame7.setVisible(true);
+//        frame3.setShape(new RoundRectangle2D.Float(0, 0, frame2.getWidth(), frame2.getHeight(), 20, 20));
+
+        label0.setFont(new Font("Gill Sans",Font.BOLD,24));
+        label0.setForeground(Color.darkGray);
+
+        headLabel.setFont(new Font("Gill Sans",Font.BOLD,24));
+        headLabel.setForeground(Color.darkGray);
+
+        label2.setFont(new Font("Gill Sans",Font.BOLD,24));
+        label2.setForeground(Color.darkGray);
+
+        solvebtn.setFont(new Font("Gill Sans",Font.PLAIN,17));
+        solvebtn.setForeground(Color.darkGray);
+
+
+
+        GridBagConstraints lgridConstraints=new GridBagConstraints();
+
+        lgridConstraints.gridx=0;
+        lgridConstraints.gridy=0;
+        lgridConstraints.gridwidth=3;
+        lgridConstraints.gridheight=1;
+        lgridConstraints.anchor=GridBagConstraints.CENTER;
+        lgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+
+        GridBagConstraints lgridConstraints2=new GridBagConstraints();
+
+        lgridConstraints2.gridx=0;
+        lgridConstraints2.gridy=1;
+        lgridConstraints2.gridwidth=3;
+        lgridConstraints2.gridheight=1;
+        lgridConstraints2.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints2.insets = new Insets(5, 15, 10, 15);
+
+        GridBagConstraints lgridConstraints3=new GridBagConstraints();
+
+        lgridConstraints3.gridx=0;
+        lgridConstraints3.gridy=2;
+        lgridConstraints3.gridwidth=3;
+        lgridConstraints3.gridheight=1;
+        lgridConstraints3.ipadx=270;
+        lgridConstraints3.ipady=20;
+        lgridConstraints3.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints3.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints lgridConstraints4=new GridBagConstraints();
+
+        lgridConstraints4.gridx=0;
+        lgridConstraints4.gridy=3;
+        lgridConstraints4.gridwidth=1;
+        lgridConstraints4.gridheight=1;
+        lgridConstraints4.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints4.insets = new Insets(5, 15, 5, 15);
+
+        GridBagConstraints lgridConstraints5=new GridBagConstraints();
+
+        lgridConstraints5.gridx=0;
+        lgridConstraints5.gridy=4;
+        lgridConstraints5.gridwidth=3;
+        lgridConstraints5.gridheight=1;
+        lgridConstraints5.ipadx=270;
+        lgridConstraints5.ipady=20;
+
+        lgridConstraints5.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints5.insets = new Insets(5, 15, 15, 15);
+
+
+        GridBagConstraints lgridConstraints6=new GridBagConstraints();
+
+        lgridConstraints6.gridx=0;
+        lgridConstraints6.gridy=5;
+        lgridConstraints6.gridwidth=1;
+        lgridConstraints6.gridheight=1;
+        lgridConstraints6.ipadx=150;
+        lgridConstraints6.ipady=40;
+        lgridConstraints6.anchor=GridBagConstraints.CENTER;
+        lgridConstraints6.insets = new Insets(5, 15, 5, 15);
+
+        frame7.add(headLabel,lgridConstraints);
+        frame7.add(label0,lgridConstraints2);
+        frame7.add(force,lgridConstraints3);
+        frame7.add(label2,lgridConstraints4);
+        frame7.add(distance,lgridConstraints5);
+        frame7.add(solvebtn,lgridConstraints6);
+
+        solvebtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                workDone();
+            }
+        });
+    }
+
+    JFrame frame0=new JFrame("SOLUTION");
+    JLabel label=new JLabel("workdone");
+
+
+
+    public void workDone() {
+        frame0.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        frame0.setSize(400, 449);
+        frame0.setLayout(new GridBagLayout());
+        frame0.setLocationRelativeTo(null);
+        frame0.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame0.setVisible(true);
+
+        label.setFont(new Font("Gill Sans", Font.BOLD, 24));
+        label.setForeground(Color.darkGray);
+
+        JPanel panel = new JPanel();
+
+        JPanel panel2 = new JPanel();
+
+        GridBagConstraints lgridConstraints = new GridBagConstraints();
+
+        lgridConstraints.gridx = 0;
+        lgridConstraints.gridy = 1;
+        lgridConstraints.gridwidth = 1;
+        lgridConstraints.gridheight = 1;
+        lgridConstraints.ipadx = 150;
+        lgridConstraints.ipady = 50;
+        lgridConstraints.anchor = GridBagConstraints.CENTER;
+        lgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints lgridConstraints2 = new GridBagConstraints();
+
+        lgridConstraints2.gridx = 0;
+        lgridConstraints2.gridy = 2;
+        lgridConstraints2.gridwidth = 1;
+        lgridConstraints2.gridheight = 1;
+        lgridConstraints2.ipadx = 80;
+        lgridConstraints2.ipady = 30;
+        lgridConstraints2.anchor = GridBagConstraints.CENTER;
+        lgridConstraints2.insets = new Insets(35, 15, 15, 15);
+
+
+        frame0.add(panel, lgridConstraints);
+
+        panel.add(label, lgridConstraints);
+
+
+        Energy energy = new Energy();
+        try {
+            float area = energy.workDone(Float.parseFloat(force.getText()), Float.parseFloat(distance.getText()));
+            JLabel label = new JLabel("Answer=" + area + "J");
+            label.setFont(new Font("Gill Sans", Font.BOLD, 24));
+            label.setForeground(Color.darkGray);
+
+            frame0.add(panel2, lgridConstraints2);
+            panel2.add(label, lgridConstraints2);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR!");
+        }
+    }
+    }
 
 
 
