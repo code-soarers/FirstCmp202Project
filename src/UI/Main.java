@@ -86,17 +86,16 @@ public class Main {
                 System.out.println("Nuclear UI.Energy =" + energy.nuclearEnergy(mass) + "J");
             }
 
-
+            System.out.println("Would you like to perform another calculator(yes or no):");
             while (true){
-                System.out.println("Would you like to perform another calculator(yes or no):");
                 String userResponse2=input.nextLine();
                 if(Objects.equals(userResponse2, "yes")){
                     System.out.println("What would you like to calculate:");
-                    System.out.println("1. Potential UI.Energy");
-                    System.out.println("2. Kinetic UI.Energy");
-                    System.out.println("3. Heat UI.Energy");
+                    System.out.println("1. Potential Energy");
+                    System.out.println("2. Kinetic Energy");
+                    System.out.println("3. Heat Energy");
                     System.out.println("4. Workdone");
-                    System.out.println("5. Nuclear UI.Energy");
+                    System.out.println("5. Nuclear Energy");
 
 
 
@@ -111,6 +110,7 @@ public class Main {
                         float height=input.nextFloat();
 
                         System.out.println("Potential UI.Energy=" + energy.potentialEnergy(mass,height) + "J");
+                        System.out.println("Would you like to perform another calculator(yes or no):");
 
                     }
 
@@ -122,6 +122,7 @@ public class Main {
                         float velocity=input.nextFloat();
 
                         System.out.println("Kinetic UI.Energy=" + energy.kineticEnergy(mass,velocity) + "J");
+                        System.out.println("Would you like to perform another calculator(yes or no):");
 
                     }
 
@@ -136,6 +137,7 @@ public class Main {
                         float finalTemp=input.nextFloat();
 
                         System.out.println("Heat UI.Energy=" + energy.heatEnergy(mass,initialTemp,finalTemp) + "J");
+                        System.out.println("Would you like to perform another calculator(yes or no):");
 
                     }
 
@@ -147,6 +149,7 @@ public class Main {
                         float distance = input.nextFloat();
 
                         System.out.println("Workdone =" + energy.workDone(force, distance) + "J");
+                        System.out.println("Would you like to perform another calculator(yes or no):");
                     }
 
                     if (userResponse == 5) {
@@ -156,6 +159,7 @@ public class Main {
 
 
                         System.out.println("Nuclear UI.Energy=" + energy.nuclearEnergy(mass) + "J");
+                        System.out.println("Would you like to perform another calculator(yes or no):");
                     }
 
 //
@@ -165,8 +169,9 @@ public class Main {
                     System.out.println("Thank you for making use of our calculator.");
                     break;
                 }
-            }
 
+            }
+            System.out.println("Would you like to perform another calculator(yes or no):");
         }
 
         else if(answer==2){
