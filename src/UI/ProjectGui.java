@@ -224,9 +224,9 @@ public class ProjectGui{
         gridConstraints4.gridwidth=3;
         gridConstraints4.gridheight=1;
         gridConstraints4.anchor=GridBagConstraints.CENTER;
-        gridConstraints4.ipadx=50;
+        gridConstraints4.ipadx=60;
         gridConstraints4.ipady=30;
-        gridConstraints2.insets = new Insets(25, 15, 15, 15);
+        gridConstraints4.insets = new Insets(25, 15, 15, 15);
 
         GridBagConstraints gridConstraints5=new GridBagConstraints();
 
@@ -235,7 +235,7 @@ public class ProjectGui{
         gridConstraints5.gridwidth=3;
         gridConstraints5.gridheight=1;
         gridConstraints5.anchor=GridBagConstraints.CENTER;
-        gridConstraints5.ipadx=50;
+        gridConstraints5.ipadx=70;
         gridConstraints5.ipady=30;
         gridConstraints5.insets = new Insets(25, 15, 15, 15);
         //
@@ -607,7 +607,7 @@ public class ProjectGui{
     }
 
     JFrame Kframe4=new JFrame("SOLUTION");
-    JLabel Klabel6=new JLabel("kinetic Energy");
+    JLabel Klabel6=new JLabel("KINETIC ENERGY");
 
 
 
@@ -682,7 +682,7 @@ public class ProjectGui{
     JButton calculatebtn2 = new JButton("CALCULATE");
     public void fourthFrame() {
         frame5.getContentPane().setBackground(new Color(4, 51, 255, 194));
-        frame5.setSize(650, 590);
+        frame5.setSize(700, 600);
         frame5.setLayout(new GridBagLayout());
         frame5.setLocationRelativeTo(null);
         frame5.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -739,7 +739,7 @@ public class ProjectGui{
 
         gridConstraints10.gridx = 0;
         gridConstraints10.gridy = 3;
-        gridConstraints10.gridwidth = 3;
+        gridConstraints10.gridwidth = 1;
         gridConstraints10.gridheight = 1;
         gridConstraints10.ipadx = 270;
         gridConstraints10.ipady = 20;
@@ -761,7 +761,7 @@ public class ProjectGui{
 
         gridConstraints12.gridx = 0;
         gridConstraints12.gridy = 5;
-        gridConstraints12.gridwidth = 1;
+        gridConstraints12.gridwidth = 3;
         gridConstraints12.gridheight = 1;
         gridConstraints12.anchor = GridBagConstraints.NORTHWEST;
         gridConstraints12.insets = new Insets(5, 15, 5, 15);
@@ -783,7 +783,7 @@ public class ProjectGui{
 
         gridConstraints14.gridx = 0;
         gridConstraints14.gridy = 7;
-        gridConstraints14.gridwidth = 1;
+        gridConstraints14.gridwidth = 3;
         gridConstraints14.gridheight = 1;
         gridConstraints14.ipadx = 150;
         gridConstraints14.ipady = 40;
@@ -809,7 +809,7 @@ public class ProjectGui{
     }
 
     JFrame frame6 = new JFrame("SOLUTION");
-    JLabel label11 = new JLabel("Heat Energy");
+    JLabel label11 = new JLabel("HEAT ENERGY");
 
 
     public void HeatEnergy() {
