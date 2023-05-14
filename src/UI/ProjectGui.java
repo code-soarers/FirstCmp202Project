@@ -193,7 +193,10 @@ public class ProjectGui{
         backBtn.setFont(new Font("Gill Sans",Font.PLAIN,17));
         backBtn.setForeground(Color.darkGray);
 
-        potentialEnergyBtn.setBorderPainted(false);
+        potentialEnergyBtn.setBackground(Color.blue);
+        kineticEnergyBtn.setBackground(Color.blue);
+        HeatEnergyBtn.setBackground(Color.blue);
+        workDoneBtn.setBackground(Color.blue);
 
         GridBagConstraints gridConstraints=new GridBagConstraints();
 
