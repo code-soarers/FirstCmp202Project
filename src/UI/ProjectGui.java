@@ -20,6 +20,11 @@ public class ProjectGui{
     JButton button1 = new JButton("Click to Continue");
 
     public void mainUI(){
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         frame.getContentPane().setBackground(new Color(4, 51, 255, 194));
         frame.setSize(350,600);
@@ -174,7 +179,7 @@ public class ProjectGui{
     JButton kineticEnergyBtn=new JButton("Kinetic Energy");
 
     JButton HeatEnergyBtn = new JButton("Heat Energy");
-    JButton workDoneBtn=new JButton("workdone");
+    JButton workDoneBtn=new JButton("Workdone");
     JButton backBtn=new JButton("Back");
 
 
