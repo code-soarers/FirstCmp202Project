@@ -15,7 +15,5 @@ Overall, this program provides a simple and user-friendly way for someone to cal
 
 # Screenshot
 
-<img height="700" src="image1.png" width="350"/>
-<img height="700" src="image2.png" width="350"/>
-<img height="700" src="image3.png" width="350"/>
-<img height="700" src="image4.png" width="350"/>
+<img height="700" src="image1.png" width="50%"/><img height="700" src="image2.png" width="50%"/>
+<img height="700" src="image3.png" width="50%"/><img height="700" src="image4.png" width="50%"/>
