@@ -180,6 +180,7 @@ public class ProjectGui{
 
     JButton HeatEnergyBtn = new JButton("Heat Energy");
     JButton workDoneBtn=new JButton("Workdone");
+    JButton nuclearEnergyBtn=new JButton("Nuclear Energy");
     JButton backBtn=new JButton("Back");
 
 
@@ -202,6 +203,7 @@ public class ProjectGui{
         kineticEnergyBtn.setBackground(Color.blue);
         HeatEnergyBtn.setBackground(Color.blue);
         workDoneBtn.setBackground(Color.blue);
+        nuclearEnergyBtn.setBackground(Color.blue);
 
         GridBagConstraints gridConstraints=new GridBagConstraints();
 
@@ -269,12 +271,24 @@ public class ProjectGui{
         gridConstraints7.ipady=30;
         gridConstraints7.insets = new Insets(25, 15, 15, 15);
 
+        GridBagConstraints gridConstraints8=new GridBagConstraints();
+
+        gridConstraints8.gridx=0;
+        gridConstraints8.gridy=5;
+        gridConstraints8.gridwidth=3;
+        gridConstraints8.gridheight=1;
+        gridConstraints8.anchor=GridBagConstraints.CENTER;
+        gridConstraints8.ipadx=80;
+        gridConstraints8.ipady=30;
+        gridConstraints8.insets = new Insets(25, 15, 15, 15);
+
 
         frame2.add(label3,gridConstraints);
         frame2.add(potentialEnergyBtn,gridConstraints2);
         frame2.add(kineticEnergyBtn, gridConstraints4);
         frame2.add(HeatEnergyBtn, gridConstraints5);
         frame2.add(workDoneBtn,gridConstraints7);
+        frame2.add(nuclearEnergyBtn,gridConstraints8);
 
 
         JPanel buttonPanel2 = new JPanel();
@@ -320,7 +334,15 @@ public class ProjectGui{
                 sixthFrame();
             }
         });
-    }
+
+        nuclearEnergyBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                seventhFrameFrame();
+            }
+        });
+
+           }
 
 
     // POTENTIAL ENERGY HERE
@@ -1065,6 +1087,171 @@ public class ProjectGui{
             label.setForeground(Color.darkGray);
 
             frame0.add(panel2, lgridConstraints2);
+            panel2.add(label, lgridConstraints2);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR!");
+        }
+    }
+    JFrame frame8=new JFrame("INPUT Nuclear Energy:");
+    JLabel headLabel2 = new JLabel("Enter the Details:");
+    JLabel newLabel=new JLabel("Enter MASS:");
+    JTextField newTextField=new JTextField();
+
+
+    JButton nuclEngsolvebtn=new JButton("CALCULATE");
+    public void seventhFrameFrame(){
+        frame8.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        frame8.setSize(351, 457);
+        frame8.setLayout(new GridBagLayout());
+        frame8.setLocationRelativeTo(null);
+        frame8.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame8.setVisible(true);
+//        frame3.setShape(new RoundRectangle2D.Float(0, 0, frame2.getWidth(), frame2.getHeight(), 20, 20));
+
+
+        headLabel2.setFont(new Font("Gill Sans",Font.BOLD,24));
+        headLabel2.setForeground(Color.darkGray);
+
+        label2.setFont(new Font("Gill Sans",Font.BOLD,24));
+        label2.setForeground(Color.darkGray);
+
+        solvebtn.setFont(new Font("Gill Sans",Font.PLAIN,17));
+        solvebtn.setForeground(Color.darkGray);
+
+
+
+        GridBagConstraints lgridConstraints=new GridBagConstraints();
+
+        lgridConstraints.gridx=0;
+        lgridConstraints.gridy=0;
+        lgridConstraints.gridwidth=3;
+        lgridConstraints.gridheight=1;
+        lgridConstraints.anchor=GridBagConstraints.CENTER;
+        lgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+
+        GridBagConstraints lgridConstraints2=new GridBagConstraints();
+
+        lgridConstraints2.gridx=0;
+        lgridConstraints2.gridy=1;
+        lgridConstraints2.gridwidth=3;
+        lgridConstraints2.gridheight=1;
+        lgridConstraints2.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints2.insets = new Insets(5, 15, 10, 15);
+
+        GridBagConstraints lgridConstraints3=new GridBagConstraints();
+
+        lgridConstraints3.gridx=0;
+        lgridConstraints3.gridy=2;
+        lgridConstraints3.gridwidth=3;
+        lgridConstraints3.gridheight=1;
+        lgridConstraints3.ipadx=270;
+        lgridConstraints3.ipady=20;
+        lgridConstraints3.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints3.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints lgridConstraints4=new GridBagConstraints();
+
+        lgridConstraints4.gridx=0;
+        lgridConstraints4.gridy=3;
+        lgridConstraints4.gridwidth=1;
+        lgridConstraints4.gridheight=1;
+        lgridConstraints4.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints4.insets = new Insets(5, 15, 5, 15);
+
+        GridBagConstraints lgridConstraints5=new GridBagConstraints();
+
+        lgridConstraints5.gridx=0;
+        lgridConstraints5.gridy=4;
+        lgridConstraints5.gridwidth=3;
+        lgridConstraints5.gridheight=1;
+        lgridConstraints5.ipadx=270;
+        lgridConstraints5.ipady=20;
+
+        lgridConstraints5.anchor=GridBagConstraints.NORTHWEST;
+        lgridConstraints5.insets = new Insets(5, 15, 15, 15);
+
+
+        GridBagConstraints lgridConstraints6=new GridBagConstraints();
+
+        lgridConstraints6.gridx=0;
+        lgridConstraints6.gridy=5;
+        lgridConstraints6.gridwidth=1;
+        lgridConstraints6.gridheight=1;
+        lgridConstraints6.ipadx=150;
+        lgridConstraints6.ipady=40;
+        lgridConstraints6.anchor=GridBagConstraints.CENTER;
+        lgridConstraints6.insets = new Insets(5, 15, 5, 15);
+
+        frame8.add(headLabel2,lgridConstraints);
+        frame8.add(newLabel,lgridConstraints4);
+        frame8.add(solvebtn,lgridConstraints6);
+        frame8.add(newTextField,lgridConstraints5);
+
+        solvebtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                nuclearEnergy();
+            }
+        });
+    }
+
+    JFrame nuclEngFrame=new JFrame("SOLUTION");
+    JLabel nuclEngLabel=new JLabel("Nuclear Energy");
+
+
+
+    public void nuclearEnergy() {
+        nuclEngFrame.getContentPane().setBackground(new Color(4, 51, 255, 194));
+        nuclEngFrame.setSize(400, 449);
+        nuclEngFrame.setLayout(new GridBagLayout());
+        nuclEngFrame.setLocationRelativeTo(null);
+        nuclEngFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        nuclEngFrame.setVisible(true);
+
+        nuclEngLabel.setFont(new Font("Gill Sans", Font.BOLD, 24));
+        nuclEngLabel.setForeground(Color.darkGray);
+
+        JPanel panel = new JPanel();
+
+        JPanel panel2 = new JPanel();
+
+        GridBagConstraints lgridConstraints = new GridBagConstraints();
+
+        lgridConstraints.gridx = 0;
+        lgridConstraints.gridy = 1;
+        lgridConstraints.gridwidth = 1;
+        lgridConstraints.gridheight = 1;
+        lgridConstraints.ipadx = 150;
+        lgridConstraints.ipady = 50;
+        lgridConstraints.anchor = GridBagConstraints.CENTER;
+        lgridConstraints.insets = new Insets(5, 15, 20, 15);
+
+        GridBagConstraints lgridConstraints2 = new GridBagConstraints();
+
+        lgridConstraints2.gridx = 0;
+        lgridConstraints2.gridy = 2;
+        lgridConstraints2.gridwidth = 1;
+        lgridConstraints2.gridheight = 1;
+        lgridConstraints2.ipadx = 80;
+        lgridConstraints2.ipady = 30;
+        lgridConstraints2.anchor = GridBagConstraints.CENTER;
+        lgridConstraints2.insets = new Insets(35, 15, 15, 15);
+
+
+        nuclEngFrame.add(panel, lgridConstraints);
+
+        panel.add(nuclEngLabel, lgridConstraints);
+
+
+        Energy energy = new Energy();
+        try {
+            double area = energy.nuclearEnergy(Float.parseFloat(newTextField.getText()));
+            JLabel label = new JLabel("Answer=" + area + "J");
+            label.setFont(new Font("Gill Sans", Font.BOLD, 24));
+            label.setForeground(Color.darkGray);
+
+            nuclEngFrame.add(panel2, lgridConstraints2);
             panel2.add(label, lgridConstraints2);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "ERROR!");
