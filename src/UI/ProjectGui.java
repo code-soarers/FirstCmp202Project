@@ -473,12 +473,12 @@ public class ProjectGui{
                 potentialEnergy();
             }
         });
-//        exitBtnOne.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                frame3.dispose();
-//            }
-//        });
+        exitBtnOne.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame3.dispose();
+            }
+        });
     }
 
     JFrame frame4=new JFrame("SOLUTION");
@@ -685,6 +685,13 @@ public class ProjectGui{
             @Override
             public void actionPerformed(ActionEvent e) {
                 kineticEnergy();
+            }
+        });
+
+        exitBtnTwo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Kframe3.dispose();
             }
         });
     }
@@ -904,6 +911,13 @@ public class ProjectGui{
             }
         });
 
+        exitBtnThree.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame5.dispose();
+            }
+        });
+
     }
 
     JFrame frame6 = new JFrame("SOLUTION");
@@ -1090,6 +1104,13 @@ public class ProjectGui{
                 workDone();
             }
         });
+
+        exitBtnFour.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame7.dispose();
+            }
+        });
     }
 
     JFrame frame0=new JFrame("SOLUTION");
@@ -1264,6 +1285,13 @@ public class ProjectGui{
             @Override
             public void actionPerformed(ActionEvent e) {
                 nuclearEnergy();
+            }
+        });
+
+        exitBtnFive.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame8.dispose();
             }
         });
     }
