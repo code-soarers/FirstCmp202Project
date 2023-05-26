@@ -360,6 +360,8 @@ public class ProjectGui{
     JTextField height=new JTextField();
 
     JButton calculatebtn=new JButton("CALCULATE");
+    JButton exitBtnOne=new JButton("exit");
+
     public void thirdFrame(){
         frame3.getContentPane().setBackground(new Color(4, 51, 255, 194));
         frame3.setSize(351, 457);
@@ -446,12 +448,24 @@ public class ProjectGui{
         gridConstraints6.anchor=GridBagConstraints.CENTER;
         gridConstraints6.insets = new Insets(5, 15, 5, 15);
 
+
+        GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.gridx=0;
+        gridBagConstraints7.gridy=6;
+        gridBagConstraints7.gridwidth=1;
+        gridBagConstraints7.gridheight=1;
+        gridBagConstraints7.ipadx=30;
+        gridBagConstraints7.ipady=20;
+        gridBagConstraints7.anchor=GridBagConstraints.NORTHWEST;
+        gridBagConstraints7.insets = new Insets(5, 15, 5, 15);
+
         frame3.add(headingLabel,gridConstraints);
         frame3.add(label4,gridConstraints2);
         frame3.add(mass,gridConstraints3);
         frame3.add(label5,gridConstraints4);
         frame3.add(height,gridConstraints5);
         frame3.add(calculatebtn,gridConstraints6);
+        frame3.add(exitBtnOne,gridBagConstraints7);
 
         calculatebtn.addActionListener(new ActionListener() {
             @Override
@@ -459,6 +473,12 @@ public class ProjectGui{
                 potentialEnergy();
             }
         });
+//        exitBtnOne.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                frame3.dispose();
+//            }
+//        });
     }
 
     JFrame frame4=new JFrame("SOLUTION");
@@ -555,6 +575,7 @@ public class ProjectGui{
     JTextField velocity=new JTextField();
 
     JButton Kcalculatebtn=new JButton("CALCULATE");
+    JButton exitBtnTwo=new JButton("exit");
     public void forthFrame(){
         Kframe3.getContentPane().setBackground(new Color(4, 51, 255, 194));
         Kframe3.setSize(351, 457);
@@ -641,12 +662,24 @@ public class ProjectGui{
         KgridConstraints6.anchor=GridBagConstraints.CENTER;
         KgridConstraints6.insets = new Insets(5, 15, 5, 15);
 
+
+        GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.gridx=0;
+        gridBagConstraints7.gridy=6;
+        gridBagConstraints7.gridwidth=1;
+        gridBagConstraints7.gridheight=1;
+        gridBagConstraints7.ipadx=30;
+        gridBagConstraints7.ipady=20;
+        gridBagConstraints7.anchor=GridBagConstraints.NORTHWEST;
+        gridBagConstraints7.insets = new Insets(5, 15, 5, 15);
+
         Kframe3.add(KheadingLabel,KgridConstraints);
         Kframe3.add(Klabel4,KgridConstraints2);
         Kframe3.add(Kmass,KgridConstraints3);
         Kframe3.add(Klabel5,KgridConstraints4);
         Kframe3.add(velocity,KgridConstraints5);
         Kframe3.add(Kcalculatebtn,KgridConstraints6);
+        Kframe3.add(exitBtnTwo,gridBagConstraints7);
 
         Kcalculatebtn.addActionListener(new ActionListener() {
             @Override
@@ -730,6 +763,7 @@ public class ProjectGui{
     JTextField initialTemperature = new JTextField();
     JTextField finalTemperature = new JTextField();
     JButton calculatebtn2 = new JButton("CALCULATE");
+    JButton exitBtnThree=new JButton("exit");
     public void fourthFrame() {
         frame5.getContentPane().setBackground(new Color(4, 51, 255, 194));
         frame5.setSize(700, 600);
@@ -840,6 +874,19 @@ public class ProjectGui{
         gridConstraints14.anchor = GridBagConstraints.CENTER;
         gridConstraints14.insets = new Insets(5, 15, 5, 15);
 
+
+        GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.gridx=0;
+        gridBagConstraints7.gridy=9;
+        gridBagConstraints7.gridwidth=1;
+        gridBagConstraints7.gridheight=1;
+        gridBagConstraints7.ipadx=30;
+        gridBagConstraints7.ipady=20;
+        gridBagConstraints7.anchor=GridBagConstraints.NORTHWEST;
+        gridBagConstraints7.insets = new Insets(5, 15, 5, 15);
+
+
+
         frame5.add(headingLabel2, gridConstraints7);
         frame5.add(label8, gridConstraints8);
         frame5.add(mass2, gridConstraints9);
@@ -848,6 +895,7 @@ public class ProjectGui{
         frame5.add(label10, gridConstraints12);
         frame5.add(finalTemperature, gridConstraints13);
         frame5.add(calculatebtn2, gridConstraints14);
+        frame5.add(exitBtnThree,gridBagConstraints7);
 
         calculatebtn2.addActionListener(new ActionListener() {
             @Override
@@ -930,6 +978,7 @@ public class ProjectGui{
     JTextField distance=new JTextField();
 
     JButton solvebtn=new JButton("CALCULATE");
+    JButton exitBtnFour = new JButton("exit");
     public void sixthFrame(){
         frame7.getContentPane().setBackground(new Color(4, 51, 255, 194));
         frame7.setSize(351, 457);
@@ -1016,12 +1065,24 @@ public class ProjectGui{
         lgridConstraints6.anchor=GridBagConstraints.CENTER;
         lgridConstraints6.insets = new Insets(5, 15, 5, 15);
 
+
+        GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.gridx=0;
+        gridBagConstraints7.gridy=6;
+        gridBagConstraints7.gridwidth=1;
+        gridBagConstraints7.gridheight=1;
+        gridBagConstraints7.ipadx=30;
+        gridBagConstraints7.ipady=20;
+        gridBagConstraints7.anchor=GridBagConstraints.NORTHWEST;
+        gridBagConstraints7.insets = new Insets(5, 15, 5, 15);
+
         frame7.add(headLabel,lgridConstraints);
         frame7.add(label0,lgridConstraints2);
         frame7.add(force,lgridConstraints3);
         frame7.add(label2,lgridConstraints4);
         frame7.add(distance,lgridConstraints5);
         frame7.add(solvebtn,lgridConstraints6);
+        frame7.add(exitBtnFour, gridBagConstraints7);
 
         solvebtn.addActionListener(new ActionListener() {
             @Override
@@ -1096,7 +1157,7 @@ public class ProjectGui{
     JLabel headLabel2 = new JLabel("Enter the Details:");
     JLabel newLabel=new JLabel("Enter MASS:");
     JTextField newTextField=new JTextField();
-
+    JButton exitBtnFive = new JButton("exit");
 
     JButton nuclEngsolvebtn=new JButton("CALCULATE");
     public void seventhFrameFrame(){
@@ -1183,10 +1244,21 @@ public class ProjectGui{
         lgridConstraints6.anchor=GridBagConstraints.CENTER;
         lgridConstraints6.insets = new Insets(5, 15, 5, 15);
 
+        GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
+        gridBagConstraints7.gridx=0;
+        gridBagConstraints7.gridy=6;
+        gridBagConstraints7.gridwidth=1;
+        gridBagConstraints7.gridheight=1;
+        gridBagConstraints7.ipadx=30;
+        gridBagConstraints7.ipady=20;
+        gridBagConstraints7.anchor=GridBagConstraints.NORTHWEST;
+        gridBagConstraints7.insets = new Insets(5, 15, 5, 15);
+
         frame8.add(headLabel2,lgridConstraints);
         frame8.add(newLabel,lgridConstraints4);
         frame8.add(solvebtn,lgridConstraints6);
         frame8.add(newTextField,lgridConstraints5);
+        frame8.add(exitBtnFive, gridBagConstraints7);
 
         solvebtn.addActionListener(new ActionListener() {
             @Override
